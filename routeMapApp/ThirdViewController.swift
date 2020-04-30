@@ -11,12 +11,13 @@ import UIKit
 class ThirdViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet var imageView: UIImageView!
+    var prefecture:String!
     
    override func viewDidLoad() {
             super.viewDidLoad()
             scrollView.maximumZoomScale = 4
             scrollView.minimumZoomScale = 1
-            imageView.image = UIImage(named: "佐賀路線図")
+            imageView.image = UIImage(named: "{prefecture}路線図")
             scrollView.delegate = self
     }
 

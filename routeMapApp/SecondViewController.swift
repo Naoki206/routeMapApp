@@ -79,7 +79,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITextFieldDe
         navigationController?.pushViewController(thirdVC, animated: true)
 
         //この時、遷移先に定義されている変数にデータの格納もできる。
-//        secondVC.todoString = areaArray[indexPath.row]
+        thirdVC.prefecture = areaArray[indexPath.row]
     }
     
     //タッチでキーボードを閉じる
