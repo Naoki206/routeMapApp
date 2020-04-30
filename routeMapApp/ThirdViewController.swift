@@ -17,7 +17,7 @@ class ThirdViewController: UIViewController, UIScrollViewDelegate {
             super.viewDidLoad()
             scrollView.maximumZoomScale = 4
             scrollView.minimumZoomScale = 1
-            imageView.image = UIImage(named: "{prefecture}路線図")
+            imageView.image = UIImage(named: prefecture + "路線図")
             scrollView.delegate = self
     }
 
