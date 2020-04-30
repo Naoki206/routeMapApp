@@ -73,9 +73,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="cH0-0s-7KR"/>
                     </view>
-                    <navigationItem key="navigationItem" id="1HL-2C-wNw"/>
+                    <navigationItem key="navigationItem" id="1HL-2C-wNw">
+                        <barButtonItem key="backBarButtonItem" title="戻る" id="NEr-D2-jiO"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="MSh-FU-vFY" id="Ndw-nS-B3q"/>
+                        <segue destination="Mx8-fO-qtd" kind="show" id="Sja-fL-uea"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cu7-5x-pPC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -85,13 +88,32 @@
         <!--Third View Controller-->
         <scene sceneID="gnE-gu-IX9">
             <objects>
-                <viewController id="Mx8-fO-qtd" customClass="ThirdViewController" customModule="routeMapApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="third" id="Mx8-fO-qtd" customClass="ThirdViewController" customModule="routeMapApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dw8-fp-vj6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" maximumZoomScale="82" translatesAutoresizingMaskIntoConstraints="NO" id="GqR-c2-2g0">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="22v-rt-bA8">
+                                        <rect key="frame" x="0.0" y="8" width="414" height="800"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="DEy-fU-GDH"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="wDG-UZ-Xgx"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="eD1-36-2xI"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ubM-Df-qFi"/>
+                    <connections>
+                        <outlet property="imageView" destination="22v-rt-bA8" id="SZb-SK-Eax"/>
+                        <outlet property="scrollView" destination="GqR-c2-2g0" id="Qek-U5-5Na"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oIh-l3-nuJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

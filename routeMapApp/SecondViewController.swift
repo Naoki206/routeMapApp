@@ -73,10 +73,10 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITextFieldDe
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         //遷移先のviewControllerを変数に格納
-        let secondVC = storyboard?.instantiateViewController(identifier: "second") as! SecondViewController
+        let thirdVC = storyboard?.instantiateViewController(identifier: "third") as! ThirdViewController
 
         //受け渡す
-        navigationController?.pushViewController(secondVC, animated: true)
+        navigationController?.pushViewController(thirdVC, animated: true)
 
         //この時、遷移先に定義されている変数にデータの格納もできる。
 //        secondVC.todoString = areaArray[indexPath.row]
